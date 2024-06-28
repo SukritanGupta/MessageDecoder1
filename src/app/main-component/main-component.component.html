@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 mt-5 ">
+            <textarea placeholder="Enter your  message here" name="message" id="message" class="col-11" rows="10" [(ngModel)]="message"></textarea>
+        </div>
+        <div class="col-12 mt-2 mb-3">
+            <div class="btn btn-success mx-2" (click)="encodeBase64()">Encode to Base64</div>
+            <div class="btn btn-primary mx-2" (click)="decodeBase64()"> Decode to Base64</div>
+            <div class="btn btn-success" (click)="encodeToBinary()">Encode to Binary</div>
+            <div class="btn btn-primary mx-2" (click)="decodeToString()">Decode to String</div>
+            <div class="btn btn-success mx-2" (click)="encodeToOctalString()">Encode To Octal</div>
+            <div class="btn btn-primary mx-2" (click)="decodeOctalString()">Decode Octal String</div>
+            <div class="btn btn-danger mx-2" (click)="clearText()">Clear Text</div>
+        </div>
+
+        <div class="col-8 mt-3 mb-3">
+            <h4> {{messageFormat}} Message:</h4>
+            <textarea placeholder="Here you get result message" name="resultMessage" class="col-8" rows="6" value={{resultMessage}} disabled></textarea>
+            <br>
+            <div class="btn btn-primary" (click)="copyText()">Copy Text</div>
+        </div>
+
+    </div>
+</div>
